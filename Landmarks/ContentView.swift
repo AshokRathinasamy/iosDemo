@@ -13,9 +13,18 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world - Ashok!")
+            Text("Hello, SwiftUI - Ashok!")
+                .font(.largeTitle)
+                .foregroundColor(.black)
+                .padding(.top, 4.0)
+            HStack {
+                Text("Text 1")
+                    .font(.subheadline)
+                Text("Text 2")
+            }
+                
         }
-        .padding()
+        .padding(.bottom)
     }
 }
 
