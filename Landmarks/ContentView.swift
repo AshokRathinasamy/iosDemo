@@ -10,21 +10,44 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, SwiftUI - Ashok!")
-                .font(.largeTitle)
-                .foregroundColor(.black)
-                .padding(.top, 4.0)
-            HStack {
-                Text("Text 1")
-                    .font(.subheadline)
-                Text("Text 2")
-            }
+            MapView()
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            
+            VStack(alignment: .leading) {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("Hello, SwiftUI - Ashok!")
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+                    .padding(.top, 4.0)
                 
+                HStack {
+                    Text("Joshua Tree National Park")
+                    Spacer()
+                    Text("California")
+                }
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                
+                
+                Divider()
+                
+                Text("About Turtle Rock")
+                    .font(.title2)
+                Text("Descriptive text goes here.")
+                
+            }
+            .padding()
+            
+            Spacer()
         }
-        .padding(.bottom)
     }
 }
 
