@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 var landmarks: [Landmark] = load("landmarkData.json")
 
 
